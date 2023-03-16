@@ -1,0 +1,64 @@
+<section>
+    <div class="img-bg">
+        <img src="https://raw.githubusercontent.com/bedimcode/responsive-login-form/eafbae66248bc27a0b1e26e2a5ddd2ad0d01956b/assets/img/authentication.svg" >
+    </div>
+    <div class="noi-dung">
+        <div class="form">
+            <h2> Admin Page </h2>
+            <form [formGroup]="SignUpForm">
+                    <span>Firstname</span>
+                    <div class="input-form" [class.error]="SignUpForm.controls['firstname'].dirty && SignUpForm.controls['firstname'].touched  && SignUpForm.hasError('required','firstname')">
+                    <input  formControlName="firstname" type="text" name="" required="" placeholder="firstname">
+                    <small *ngIf="SignUpForm.controls['firstname'].dirty && SignUpForm.controls['firstname'].touched && SignUpForm.hasError('required','firstname')" class="text-danger">Firstname is required </small>
+
+                </div>
+
+
+                <span>Lasname</span>
+                <div class="input-form" [class.error]="SignUpForm.controls['lastname'].dirty && SignUpForm.controls['lastname'].touched  && SignUpForm.hasError('required','lastname')">
+                    <input  formControlName="lastname" type="text" name="" required="" placeholder="lastname">
+                    <small *ngIf="SignUpForm.controls['lastname'].dirty && SignUpForm.controls['lastname'].touched && SignUpForm.hasError('required','lastname')" class="text-danger">Lastname is required </small>
+                  </div>
+
+
+                  <span>Username</span>
+                  <div class="input-form" [class.error]="SignUpForm.controls['username'].dirty && SignUpForm.controls['username'].touched  && SignUpForm.hasError('required','username')">
+                    <input  formControlName="username" type="text" name="" required="" placeholder="username">
+                    <small *ngIf="SignUpForm.controls['username'].dirty && SignUpForm.controls['username'].touched && SignUpForm.hasError('required','username')" class="text-danger">Username is required </small>
+                  </div>
+    
+                  <span>Email </span>
+                  <div class="input-form" [class.error]="SignUpForm.controls['email'].dirty && SignUpForm.controls['email'].touched  && SignUpForm.hasError('required','email')">
+                    <input  formControlName="email" type="text" name="" required="" placeholder="email">
+                    <small *ngIf="SignUpForm.controls['email'].dirty && SignUpForm.controls['email'].touched && SignUpForm.hasError('required','email')" >Email is required </small>
+                  </div>
+
+                  <span>Password</span>
+                  <div class="input-form" [class.error]="SignUpForm.controls['password'].dirty && SignUpForm.controls['password'].touched  && SignUpForm.hasError('required','password')">
+                    <input  formControlName="password" type="password" id="password" name="" required="" placeholder="password">    
+                    <small *ngIf="SignUpForm.controls['password'].dirty && SignUpForm.controls['password'].touched && SignUpForm.hasError('required','password')" class="text-danger">Password is required </small>
+                  </div>
+
+
+                  <span>Role</span>
+                  <div class="input-form" [class.error]="SignUpForm.controls['role'].dirty && SignUpForm.controls['role'].touched  && SignUpForm.hasError('required','role')">
+                    <input  formControlName="role" type="text" name="" required="" placeholder="role">
+                    <small *ngIf="SignUpForm.controls['role'].dirty && SignUpForm.controls['role'].touched && SignUpForm.hasError('required','role')" class="text-danger">Role is required </small>
+                  </div>
+
+              
+                <div class="nho-dang-nhap">
+                    <label><input type="checkbox" name=""> Remember me</label>
+                </div>
+                <div class="input-form">
+                    <input  (click)="onSignup()" type="submit" value="Create account">
+                </div>
+            
+            </form>
+     
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
